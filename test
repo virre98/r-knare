@@ -1,0 +1,46 @@
+package se.lexicon.viktor;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class AppTest {
+        @Test
+        public void test_addition_return_expected_result(){
+                double num1 = 0.5;
+                double num2 = 14;
+                double expectedResult = 14.5;
+                double actuallResult = App.sum(num1, num2);
+
+                Assert.assertEquals(expectedResult, actuallResult, 0);
+        }
+        @Test
+        public void test_subtraction_return_expected_result(){
+                double num1 = 37;
+                double num2 = 17;
+                double expectedResult = 20;
+                double actuallResult = App.sub(num1, num2);
+
+                Assert.assertEquals(expectedResult, actuallResult, 0);
+        }
+        @Test
+        public void test_multiplication_return_expected_result(){
+                double num1 = 10;
+                double num2 = 5;
+                double expectedResult = 50;
+                double actuallResult = App.mul(num1, num2);
+
+                Assert.assertEquals(expectedResult, actuallResult, 0);
+        }
+        @Test
+        public void test_division_return_expected_reult(){
+                double num1 = 60;
+                double num2 = 6;
+                double expectedResult = 10;
+                double actuallResult = App.div(num1, num2);
+
+                Assert.assertEquals(expectedResult, actuallResult, 0);
+        }
+
+
+
+        }
