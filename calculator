@@ -1,0 +1,59 @@
+package se.lexicon.viktor;
+
+import java.util.Scanner;
+
+public class App {
+    public static void main( String[] args ) {
+
+
+        Scanner scanner = new Scanner(System.in);
+        boolean x = true;
+        while(x) {
+            System.out.println("Skriv ett nummer: ");
+            double num1 = scanner.nextDouble();
+            System.out.println("Skriv en operator: ");
+            scanner.nextLine();
+            String operator = scanner.nextLine();
+            System.out.println("Skriv ett till nummer: ");
+            double num2 = scanner.nextDouble();
+            double result = 0;
+
+            switch (operator) {
+                case "+": result = sum(num1, num2);
+                    break;
+                case "-": result = sub(num1, num2);
+                    break;
+                case "*": result = mul(num1, num2);
+                    break;
+                case "/": result = div(num1, num2);
+                    break;
+                default:
+                    System.out.println(operator + " fungerade inte. Skriv en annan operator: ");
+            }
+            System.out.println(num1 + operator + num2 + " = " + result);
+            System.out.println("Vill du fortsätta? ja/nej ");
+                scanner.nextLine();
+                String janej = scanner.nextLine();
+                if (janej.equals("ja")){
+                x = true;
+            }
+            else if (janej.equals("nej")){
+                x = false;
+            }
+        }
+
+    }
+    public static double sum(double nummer1, double nummer2){
+        return nummer1 + nummer2;
+    }
+    public static double sub(double nummer1, double nummer2){
+        return nummer1 - nummer2;
+    }
+    public static double mul(double nummer1, double nummer2){
+        return nummer1 * nummer2;
+    }
+    public static double div(double nummer1, double nummer2){
+        return nummer1 / nummer2;
+    }
+
+}
